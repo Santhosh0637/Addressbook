@@ -25,7 +25,8 @@ jobs:
       #   run: pip install -r requirements.txt
       - name: Make script executable
         # run: ls -lrt
-        run: chmod +x /Scripts/hello.py
+        # run: chmod +x /Scripts/hello.py
+        run: chmod +x Scripts/hello.py
  
       - name: Run validation script
-        run: python ./Scripts/hello.py
+        run: python Scripts/hello.py
