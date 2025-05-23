@@ -1,0 +1,30 @@
+name: Validate Policy-Architecture Compliance
+ 
+on:
+  push:
+    paths:
+      - 'Scripts/*.py'
+  pull_request:
+    paths:
+      - 'Scripts/*.py'
+  workflow_dispatch:
+ 
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+ 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+      - name: Make script executable
+        run: chmod +x scripts/hello.py
+ 
+      - name: Run validation script
+        run: python ./scripts/hello.py
