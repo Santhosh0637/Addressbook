@@ -24,7 +24,7 @@ jobs:
       # - name: Install dependencies
       #   run: pip install -r requirements.txt
       - name: Make script executable
-        run: chmod +x scripts/hello.py
+        run: chmod +x Addressbook/Scripts/hello.py
  
       - name: Run validation script
         run: python ./scripts/hello.py
