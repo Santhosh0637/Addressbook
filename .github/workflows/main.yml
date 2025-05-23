@@ -3,10 +3,10 @@ name: Validate Policy-Architecture Compliance
 on:
   push:
     paths:
-      - 'Scripts/*.py'
+      - 'Addressbook/Scripts/*.py'
   pull_request:
     paths:
-      - 'Scripts/*.py'
+      - 'Addressbook/Scripts/*.py'
   workflow_dispatch:
  
 jobs:
